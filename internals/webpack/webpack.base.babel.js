@@ -45,7 +45,8 @@ module.exports = (options) => ({
       '',
       '.js'
     ]
-  },
+  },  
+  target: 'web', // Make web variables accessible to webpack, e.g. window
   stats: false,
   progress: true
 })
