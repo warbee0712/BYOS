@@ -9,3 +9,12 @@ Setup
 ```
 npm install
 ```
+
+Starting Application
+---
+
+```
+npm start
+// or
+npm start:tunnel // with tunneling through ngrok
+```
