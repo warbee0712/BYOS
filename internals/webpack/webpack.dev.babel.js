@@ -2,10 +2,10 @@
  *  DEVELOPMENT WEBPACK CONFIGURATION
  */
 
-import path from 'path'
-import fs from 'fs'
-import webpack from 'webpack'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
+const path = require('path')
+const fs = require('fs')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const plugins = [
   // new webpack.HotModuleReplacementPlugin(), // Tell webpack we want hot reloading
@@ -16,9 +16,9 @@ const plugins = [
   })
 ]
 
-module.exports = require('./webpack.base.babel.js')({
+module.exports = require('./webpack.base.babel')({
   entry: [
-    path.join(process.pwd(), 'app/app.js')
+    path.join(process.cwd(), 'app/app.js')
   ],
   // Don't use hashes in dev mode for better performance
   output: {
