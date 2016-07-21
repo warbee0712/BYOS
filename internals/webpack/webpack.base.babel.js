@@ -9,7 +9,7 @@ module.exports = (options) => ({
   entry: options.entry,
   output: Object.assign({ // Compile into js/build.js
     path: path.resolve(process.cwd(), 'build'),
-    publicPath: '/',
+    publicPath: '/'
   }, options.output),
   module: {
     loaders: [
@@ -18,9 +18,9 @@ module.exports = (options) => ({
         loader: 'babel',
         exclude: '/node_modules/',
         query: options.babelQuery
-      },{
+      }, {
         test: /\.html$/,
-        loader: 'html-loader',
+        loader: 'html-loader'
       }
     ]
   },
