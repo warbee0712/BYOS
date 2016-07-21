@@ -18,6 +18,9 @@ module.exports = (options) => ({
         loader: 'babel',
         exclude: '/node_modules/',
         query: options.babelQuery
+      },{
+        test: /\.html$/,
+        loader: 'html-loader',
       }
     ]
   },
